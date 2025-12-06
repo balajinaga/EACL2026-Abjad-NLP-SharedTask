@@ -655,6 +655,19 @@ header {
     text-decoration: underline;
 }
 
+.organizer-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    word-break: break-word;
+}
+
+.organizer-link:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
 .contact-info {
     text-align: center;
     padding: var(--spacing-md);

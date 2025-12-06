@@ -58,7 +58,7 @@
   - Test the live URL after deployment
   - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-- [ ] 9. Perform cross-browser and responsive testing
+- [x] 9. Perform cross-browser and responsive testing
   - Test website on Chrome, Firefox, Safari, and Edge browsers
   - Verify responsive layout on mobile devices (320px to 768px)
   - Test on tablet devices (768px to 1024px)
