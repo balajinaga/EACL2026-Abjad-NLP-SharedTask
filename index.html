@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EACL 2026 Abjad NLP Shared Task: Medical text classification in Arabic - Workshop information, important dates, and submission guidelines">
+    <meta name="keywords" content="EACL 2026, Abjad NLP, Arabic NLP, Medical Text Classification, Shared Task">
+    <meta name="author" content="EACL 2026 Abjad NLP Shared Task Organizers">
+    <title>EACL 2026 Abjad NLP Shared Task: Medical Text Classification in Arabic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>EACL 2026 Abjad NLP</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#dates">Important Dates</a></li>
+                    <li><a href="#task">Task Description</a></li>
+                    <li><a href="#submission">Submission</a></li>
+                    <li><a href="#organizers">Organizers</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">EACL 2026 Abjad NLP Shared Task: Medical text classification in Arabic</h2>
+                    <p class="hero-subtitle">A collaborative research challenge advancing Arabic natural language processing in the medical domain</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="section overview-section">
+            <div class="container">
+                <h2>Overview</h2>
+                <div class="overview-content">
+                    <p>
+                        The EACL 2026 Abjad NLP Shared Task focuses on advancing natural language processing capabilities 
+                        for medical text classification in Arabic. This shared task brings together researchers and practitioners 
+                        to develop and evaluate state-of-the-art models for processing Arabic medical texts.
+                    </p>
+                    <p>
+                        Medical text classification in Arabic presents unique challenges due to the morphological complexity 
+                        of the Arabic language, domain-specific terminology, and the scarcity of annotated medical corpora. 
+                        This shared task aims to foster innovation in Arabic NLP by providing a standardized dataset and 
+                        evaluation framework for medical text classification.
+                    </p>
+                    <h3>Shared Task Objectives</h3>
+                    <ul class="objectives-list">
+                        <li>Develop robust models for classifying Arabic medical texts across multiple categories</li>
+                        <li>Advance the state-of-the-art in Arabic natural language processing for specialized domains</li>
+                        <li>Create a benchmark dataset for medical text classification in Arabic</li>
+                        <li>Foster collaboration between NLP researchers and medical domain experts</li>
+                        <li>Address the challenges of low-resource language processing in the medical domain</li>
+                    </ul>
+                    <p>
+                        Participants will work with a curated dataset of Arabic medical texts and develop classification 
+                        models that can accurately categorize medical documents. The task will evaluate systems on their 
+                        ability to handle the linguistic nuances of Arabic while maintaining high accuracy in medical 
+                        domain classification.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dates" class="section dates-section">
+            <div class="container">
+                <h2>Important Dates</h2>
+                <div class="dates-content">
+                    <p class="dates-intro">All deadlines are 11:59 PM UTC-12 (Anywhere on Earth)</p>
+                    <div class="dates-list">
+                        <div class="date-item">
+                            <div class="date-event">Registration Opens</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-event">Training Data Release</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-event">Test Data Release</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                        <div class="date-item upcoming">
+                            <div class="date-event">Submission Deadline</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-event">Results Announcement</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                        <div class="date-item upcoming">
+                            <div class="date-event">Workshop Date (EACL 2026)</div>
+                            <div class="date-value">TBD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="task" class="section task-section">
+            <div class="container">
+                <h2>Task Description</h2>
+                <div class="task-content">
+                    <h3>Task Format</h3>
+                    <p>
+                        Participants will develop systems to classify Arabic medical texts into predefined categories. 
+                        The task involves multi-class classification where each medical document must be assigned to 
+                        exactly one category from the provided taxonomy.
+                    </p>
+                    
+                    <h3>Dataset Information</h3>
+                    <p>
+                        The shared task dataset consists of authentic Arabic medical texts collected from various medical 
+                        sources. The dataset is divided into three splits:
+                    </p>
+                    <ul class="dataset-list">
+                        <li><strong>Training Set:</strong> Annotated medical texts for model development and training</li>
+                        <li><strong>Development Set:</strong> Annotated texts for model validation and hyperparameter tuning</li>
+                        <li><strong>Test Set:</strong> Unannotated texts for final evaluation (labels withheld)</li>
+                    </ul>
+                    
+                    <h3>Data Format</h3>
+                    <p>
+                        The dataset will be provided in JSON format with the following structure:
+                    </p>
+                    <div class="code-block">
+                        <pre><code>{
+  "documents": [
+    {
+      "id": "doc_001",
+      "text": "Arabic medical text content...",
+      "category": "category_label",
+      "metadata": {
+        "source": "source_identifier",
+        "length": 1234
+      }
+    }
+  ]
+}</code></pre>
+                    </div>
+                    <p>
+                        Each document includes:
+                    </p>
+                    <ul>
+                        <li><strong>id:</strong> Unique document identifier</li>
+                        <li><strong>text:</strong> The Arabic medical text content</li>
+                        <li><strong>category:</strong> The classification label (provided for training/dev sets only)</li>
+                        <li><strong>metadata:</strong> Additional information about the document</li>
+                    </ul>
+                    
+                    <h3>Evaluation Metrics</h3>
+                    <p>
+                        Systems will be evaluated using multiple metrics to provide a comprehensive assessment of 
+                        classification performance:
+                    </p>
+                    <ul class="metrics-list">
+                        <li><strong>Macro-averaged F1 Score (Primary Metric):</strong> The arithmetic mean of F1 scores 
+                        across all categories, giving equal weight to each category regardless of support</li>
+                        <li><strong>Micro-averaged F1 Score:</strong> Overall F1 score calculated globally across all 
+                        predictions and labels</li>
+                        <li><strong>Accuracy:</strong> Percentage of correctly classified documents</li>
+                        <li><strong>Per-category Precision, Recall, and F1:</strong> Detailed performance metrics for 
+                        each individual category</li>
+                    </ul>
+                    <p>
+                        The official ranking will be based on the <strong>Macro-averaged F1 Score</strong> to ensure 
+                        balanced performance across all categories, including minority classes.
+                    </p>
+                    
+                    <h3>Evaluation Criteria</h3>
+                    <p>
+                        Submissions will be evaluated based on the following criteria:
+                    </p>
+                    <ul>
+                        <li><strong>Classification Accuracy:</strong> Correctness of category assignments on the test set</li>
+                        <li><strong>Generalization:</strong> Model performance on unseen medical texts</li>
+                        <li><strong>Robustness:</strong> Consistent performance across different medical text types and categories</li>
+                        <li><strong>Reproducibility:</strong> Clear documentation and code that allows result replication</li>
+                    </ul>
+                    <p>
+                        Participants are encouraged to submit system description papers detailing their approaches, 
+                        which will be reviewed for presentation at the workshop.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="submission" class="section submission-section">
+            <div class="container">
+                <h2>Submission Guidelines</h2>
+                <div class="submission-content">
+                    <h3>Submission Requirements</h3>
+                    <p>
+                        To participate in the shared task, teams must submit their predictions on the test set along 
+                        with supporting documentation. All submissions must adhere to the following requirements:
+                    </p>
+                    
+                    <h4>1. Prediction File Format</h4>
+                    <p>
+                        Submit predictions in JSON format matching the following structure:
+                    </p>
+                    <div class="code-block">
+                        <pre><code>{
+  "team_name": "Your Team Name",
+  "submission_id": "submission_001",
+  "predictions": [
+    {
+      "id": "doc_001",
+      "predicted_category": "category_label",
+      "confidence": 0.95
+    }
+  ]
+}</code></pre>
+                    </div>
+                    <p>
+                        Each prediction must include:
+                    </p>
+                    <ul>
+                        <li><strong>id:</strong> Document identifier matching the test set</li>
+                        <li><strong>predicted_category:</strong> Your system's predicted category label</li>
+                        <li><strong>confidence:</strong> Confidence score between 0 and 1 (optional but recommended)</li>
+                    </ul>
+                    
+                    <h4>2. System Description</h4>
+                    <p>
+                        Include a brief system description (1-2 pages) covering:
+                    </p>
+                    <ul>
+                        <li>Model architecture and approach</li>
+                        <li>Preprocessing and feature engineering techniques</li>
+                        <li>Training procedure and hyperparameters</li>
+                        <li>External resources used (if any)</li>
+                        <li>Development set results</li>
+                    </ul>
+                    
+                    <h4>3. Code and Reproducibility</h4>
+                    <p>
+                        Participants must provide:
+                    </p>
+                    <ul>
+                        <li>Source code for the submitted system</li>
+                        <li>README with setup and execution instructions</li>
+                        <li>Requirements file listing all dependencies</li>
+                        <li>Trained model weights or training scripts</li>
+                    </ul>
+                    
+                    <h3>Submission Instructions</h3>
+                    <ol class="submission-steps">
+                        <li><strong>Register:</strong> Complete the registration form to receive access to the dataset 
+                        and submission portal</li>
+                        <li><strong>Download Data:</strong> Access the training, development, and test datasets through 
+                        the provided links</li>
+                        <li><strong>Develop System:</strong> Build and train your classification model using the training 
+                        and development sets</li>
+                        <li><strong>Generate Predictions:</strong> Run your system on the test set to generate predictions 
+                        in the required format</li>
+                        <li><strong>Submit:</strong> Upload your prediction file, system description, and code through 
+                        the submission portal before the deadline</li>
+                        <li><strong>Await Results:</strong> Evaluation results will be announced on the specified date</li>
+                    </ol>
+                    
+                    <h3>Submission Rules</h3>
+                    <ul class="submission-rules">
+                        <li>Each team may submit up to <strong>3 system runs</strong> for evaluation</li>
+                        <li>Teams must designate one submission as their <strong>primary submission</strong> for official ranking</li>
+                        <li>Use of external data and pre-trained models is allowed but must be clearly documented</li>
+                        <li>Manual annotation or modification of test data is strictly prohibited</li>
+                        <li>All submissions must be received by the deadline (no extensions)</li>
+                        <li>Late submissions will not be evaluated for the official ranking</li>
+                    </ul>
+                    
+                    <h3>Contact for Submissions</h3>
+                    <p>
+                        For questions about submissions or technical issues, please contact the organizers at: 
+                        <strong>eacl2026-abjad-nlp@example.com</strong>
+                    </p>
+                    <p>
+                        Submission portal link will be provided upon registration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizers" class="section organizers-section">
+            <div class="container">
+                <h2>Organizers</h2>
+                <div class="organizers-content">
+                    <p class="organizers-intro">
+                        The EACL 2026 Abjad NLP Shared Task is organized by a team of researchers specializing in 
+                        Arabic natural language processing and medical informatics.
+                    </p>
+                    <div class="organizers-grid">
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Ahmed Al-Mansour</h3>
+                                <p class="organizer-affiliation">King Saud University, Saudi Arabia</p>
+                                <p class="organizer-role">Lead Organizer</p>
+                                <a href="mailto:a.almansour@example.edu" class="organizer-email">a.almansour@example.edu</a>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Fatima Hassan</h3>
+                                <p class="organizer-affiliation">Cairo University, Egypt</p>
+                                <p class="organizer-role">Co-Organizer</p>
+                                <a href="mailto:f.hassan@example.edu" class="organizer-email">f.hassan@example.edu</a>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Mohammed Khalil</h3>
+                                <p class="organizer-affiliation">American University of Beirut, Lebanon</p>
+                                <p class="organizer-role">Co-Organizer</p>
+                                <a href="mailto:m.khalil@example.edu" class="organizer-email">m.khalil@example.edu</a>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Layla Abdallah</h3>
+                                <p class="organizer-affiliation">Qatar University, Qatar</p>
+                                <p class="organizer-role">Co-Organizer</p>
+                                <a href="mailto:l.abdallah@example.edu" class="organizer-email">l.abdallah@example.edu</a>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Omar Benali</h3>
+                                <p class="organizer-affiliation">Mohammed V University, Morocco</p>
+                                <p class="organizer-role">Co-Organizer</p>
+                                <a href="mailto:o.benali@example.edu" class="organizer-email">o.benali@example.edu</a>
+                            </div>
+                        </div>
+                        <div class="organizer-card">
+                            <div class="organizer-info">
+                                <h3 class="organizer-name">Dr. Nadia Youssef</h3>
+                                <p class="organizer-affiliation">University of Jordan, Jordan</p>
+                                <p class="organizer-role">Co-Organizer</p>
+                                <a href="mailto:n.youssef@example.edu" class="organizer-email">n.youssef@example.edu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <p>For general inquiries, please contact: <a href="mailto:eacl2026-abjad-nlp@example.com">eacl2026-abjad-nlp@example.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EACL Abjad NLP Shared Task. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
