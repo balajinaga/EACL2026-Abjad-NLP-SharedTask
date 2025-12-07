@@ -127,11 +127,24 @@ header {
     gap: var(--spacing-sm);
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    border-radius: var(--border-radius-sm);
+}
+
 .nav-brand h1 {
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
     text-align: center;
+    margin: 0;
 }
 
 .nav-menu {
@@ -751,6 +764,10 @@ footer p {
         align-items: center;
     }
     
+    .nav-logo {
+        height: 50px;
+    }
+    
     .nav-brand h1 {
         font-size: 1.5rem;
     }
@@ -849,6 +866,10 @@ footer p {
     }
     
     /* Navigation */
+    .nav-logo {
+        height: 60px;
+    }
+    
     .nav-brand h1 {
         font-size: 1.75rem;
     }
