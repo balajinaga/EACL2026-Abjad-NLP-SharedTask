@@ -855,3 +855,58 @@ footer p {
         font-size: 2.25rem;
     }
 }
+
+/* ============================================
+   Kaggle Signup Styles
+   ============================================ */
+.kaggle-signup-box {
+    background: linear-gradient(135deg, #20beff 0%, #1a8fd9 100%);
+    color: var(--color-text-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.kaggle-signup-box h3 {
+    color: var(--color-text-white);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.kaggle-signup-box p {
+    color: var(--color-text-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.kaggle-button {
+    display: inline-block;
+    background-color: var(--color-text-white);
+    color: #1a8fd9;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kaggle-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.kaggle-link {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: underline;
+    transition: color var(--transition-fast);
+}
+
+.kaggle-link:hover {
+    color: var(--color-secondary);
+}
