@@ -42,29 +42,28 @@
                 <h2>Overview</h2>
                 <div class="overview-content">
                     <p>
-                        The EACL 2026 Abjad NLP Shared Task focuses on advancing natural language processing capabilities 
-                        for medical text classification in Arabic. This shared task brings together researchers and practitioners 
-                        to develop and evaluate state-of-the-art models for processing Arabic medical texts.
+                        Welcome to the medical text classification shared task at the <a href="https://wp.lancs.ac.uk/abjad/" target="_blank">Abjad NLP workshop</a> in EACL 2026! 
+                        This shared task brings together researchers and practitioners to develop and evaluate state-of-the-art models 
+                        for processing Arabic medical texts.
                     </p>
                     <p>
-                        Medical text classification in Arabic presents unique challenges due to the morphological complexity 
-                        of the Arabic language, domain-specific terminology, and the scarcity of annotated medical corpora. 
-                        This shared task aims to foster innovation in Arabic NLP by providing a standardized dataset and 
-                        evaluation framework for medical text classification.
+                        Each row in the dataset contains a question-answer pair in Arabic under the column named "text", along with 
+                        a category under the "category" column (the class to be predicted). There are <strong>82 categories</strong> in total, 
+                        and there is considerable class imbalance in the dataset across these 82 categories, which makes the problem interesting.
                     </p>
-                    <h3>Shared Task Objectives</h3>
-                    <ul class="objectives-list">
-                        <li>Develop robust models for classifying Arabic medical texts across multiple categories</li>
-                        <li>Advance the state-of-the-art in Arabic natural language processing for specialized domains</li>
-                        <li>Create a benchmark dataset for medical text classification in Arabic</li>
-                        <li>Foster collaboration between NLP researchers and medical domain experts</li>
-                        <li>Address the challenges of low-resource language processing in the medical domain</li>
-                    </ul>
                     <p>
-                        Participants will work with a curated dataset of Arabic medical texts and develop classification 
-                        models that can accurately categorize medical documents. The task will evaluate systems on their 
-                        ability to handle the linguistic nuances of Arabic while maintaining high accuracy in medical 
-                        domain classification.
+                        Note that you need to predict the integer label corresponding to the "category" column given under the "label" column. 
+                        These category names were originally in Arabic, but we translated them into English using an LLM in order to aid in modeling.
+                    </p>
+                    <p>
+                        These question-answer pairs are from the healthcare domain, and given the importance of NLP applications for healthcare 
+                        in Abjad script languages such as Arabic, we are confident that this shared task will attract significant interest and 
+                        have a positive impact on the community.
+                    </p>
+                    <h3>Getting Started</h3>
+                    <p>
+                        To help you get started, we have shared a <a href="https://colab.research.google.com/drive/10LAGmJZhoocW2N19lX3jRg49BWLJOYBF?usp=sharing" target="_blank">sample Colab notebook</a>, 
+                        where we finetune CamelBERT.
                     </p>
                 </div>
             </div>
@@ -77,28 +76,36 @@
                     <p class="dates-intro">All deadlines are 11:59 PM UTC-12 (Anywhere on Earth)</p>
                     <div class="dates-list">
                         <div class="date-item">
-                            <div class="date-event">Registration Opens</div>
-                            <div class="date-value">TBD</div>
+                            <div class="date-event">Release of training data</div>
+                            <div class="date-value">December 8, 2025</div>
                         </div>
                         <div class="date-item">
-                            <div class="date-event">Training Data Release</div>
-                            <div class="date-value">TBD</div>
-                        </div>
-                        <div class="date-item">
-                            <div class="date-event">Test Data Release</div>
-                            <div class="date-value">TBD</div>
+                            <div class="date-event">Release of test data</div>
+                            <div class="date-value">December 25, 2025</div>
                         </div>
                         <div class="date-item upcoming">
-                            <div class="date-event">Submission Deadline</div>
-                            <div class="date-value">TBD</div>
+                            <div class="date-event">End of evaluation cycle (test submissions close)</div>
+                            <div class="date-value">December 31, 2025</div>
                         </div>
                         <div class="date-item">
-                            <div class="date-event">Results Announcement</div>
-                            <div class="date-value">TBD</div>
+                            <div class="date-event">Final results released</div>
+                            <div class="date-value">January 2, 2026</div>
                         </div>
                         <div class="date-item upcoming">
-                            <div class="date-event">Workshop Date (EACL 2026)</div>
-                            <div class="date-value">TBD</div>
+                            <div class="date-event">Shared task papers due date</div>
+                            <div class="date-value">January 13, 2026</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-event">Notification of acceptance</div>
+                            <div class="date-value">January 20, 2026</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-event">Camera-ready versions due</div>
+                            <div class="date-value">February 3, 2026</div>
+                        </div>
+                        <div class="date-item upcoming">
+                            <div class="date-event">Workshop Dates</div>
+                            <div class="date-value">March 24–29, 2026 [TBD]</div>
                         </div>
                     </div>
                 </div>
@@ -111,83 +118,38 @@
                 <div class="task-content">
                     <h3>Task Format</h3>
                     <p>
-                        Participants will develop systems to classify Arabic medical texts into predefined categories. 
-                        The task involves multi-class classification where each medical document must be assigned to 
-                        exactly one category from the provided taxonomy.
+                        Participants will develop systems to classify Arabic medical question-answer pairs into 82 predefined categories. 
+                        The task involves multi-class classification where each text must be assigned to exactly one category.
                     </p>
                     
                     <h3>Dataset Information</h3>
                     <p>
-                        The shared task dataset consists of authentic Arabic medical texts collected from various medical 
-                        sources. The dataset is divided into three splits:
+                        The dataset consists of question-answer pairs in Arabic from the healthcare domain. Each row contains:
                     </p>
                     <ul class="dataset-list">
-                        <li><strong>Training Set:</strong> Annotated medical texts for model development and training</li>
-                        <li><strong>Development Set:</strong> Annotated texts for model validation and hyperparameter tuning</li>
-                        <li><strong>Test Set:</strong> Unannotated texts for final evaluation (labels withheld)</li>
-                    </ul>
-                    
-                    <h3>Data Format</h3>
-                    <p>
-                        The dataset will be provided in JSON format with the following structure:
-                    </p>
-                    <div class="code-block">
-                        <pre><code>{
-  "documents": [
-    {
-      "id": "doc_001",
-      "text": "Arabic medical text content...",
-      "category": "category_label",
-      "metadata": {
-        "source": "source_identifier",
-        "length": 1234
-      }
-    }
-  ]
-}</code></pre>
-                    </div>
-                    <p>
-                        Each document includes:
-                    </p>
-                    <ul>
-                        <li><strong>id:</strong> Unique document identifier</li>
-                        <li><strong>text:</strong> The Arabic medical text content</li>
-                        <li><strong>category:</strong> The classification label (provided for training/dev sets only)</li>
-                        <li><strong>metadata:</strong> Additional information about the document</li>
-                    </ul>
-                    
-                    <h3>Evaluation Metrics</h3>
-                    <p>
-                        Systems will be evaluated using multiple metrics to provide a comprehensive assessment of 
-                        classification performance:
-                    </p>
-                    <ul class="metrics-list">
-                        <li><strong>Macro-averaged F1 Score (Primary Metric):</strong> The arithmetic mean of F1 scores 
-                        across all categories, giving equal weight to each category regardless of support</li>
-                        <li><strong>Micro-averaged F1 Score:</strong> Overall F1 score calculated globally across all 
-                        predictions and labels</li>
-                        <li><strong>Accuracy:</strong> Percentage of correctly classified documents</li>
-                        <li><strong>Per-category Precision, Recall, and F1:</strong> Detailed performance metrics for 
-                        each individual category</li>
+                        <li><strong>text:</strong> Question-answer pair in Arabic</li>
+                        <li><strong>category:</strong> Category name (English translation of original Arabic category)</li>
+                        <li><strong>label:</strong> Integer label corresponding to the category (this is what you need to predict)</li>
                     </ul>
                     <p>
-                        The official ranking will be based on the <strong>Macro-averaged F1 Score</strong> to ensure 
-                        balanced performance across all categories, including minority classes.
+                        There are <strong>82 categories</strong> in total with considerable class imbalance, making this a challenging 
+                        multi-class classification problem.
                     </p>
                     
-                    <h3>Evaluation Criteria</h3>
-                    <p>
-                        Submissions will be evaluated based on the following criteria:
-                    </p>
-                    <ul>
-                        <li><strong>Classification Accuracy:</strong> Correctness of category assignments on the test set</li>
-                        <li><strong>Generalization:</strong> Model performance on unseen medical texts</li>
-                        <li><strong>Robustness:</strong> Consistent performance across different medical text types and categories</li>
-                        <li><strong>Reproducibility:</strong> Clear documentation and code that allows result replication</li>
+                    <h3>Dataset Links</h3>
+                    <ul class="dataset-list">
+                        <li><strong>Training Dataset:</strong> <a href="https://drive.google.com/file/d/19bBhM9Eir6DnLijm90QHwELgGrG2wtZQ/view?usp=sharing" target="_blank">Download here</a></li>
+                        <li><strong>Evaluation Dataset (no labels):</strong> <a href="https://drive.google.com/file/d/1_uXX2ILzhf9aUGos3WPWu6K7dDp4yJoe/view?usp=drive_link" target="_blank">Download here</a></li>
                     </ul>
+                    
+                    <h3>Evaluation Metric</h3>
                     <p>
-                        Participants are encouraged to submit system description papers detailing their approaches, 
-                        which will be reviewed for presentation at the workshop.
+                        The scoring metric will be <strong>macro-averaged F1 score</strong> for all 82 classes. This metric gives equal 
+                        weight to each category regardless of support, ensuring balanced performance across all classes including minority ones.
+                    </p>
+                    <p>
+                        To read more about the macro-average F1 metric, refer to the 
+                        <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html" target="_blank">scikit-learn documentation</a>.
                     </p>
                 </div>
             </div>
@@ -197,93 +159,57 @@
             <div class="container">
                 <h2>Submission Guidelines</h2>
                 <div class="submission-content">
-                    <h3>Submission Requirements</h3>
+                    <h3>Prediction File Format</h3>
                     <p>
-                        To participate in the shared task, teams must submit their predictions on the test set along 
-                        with supporting documentation. All submissions must adhere to the following requirements:
-                    </p>
-                    
-                    <h4>1. Prediction File Format</h4>
-                    <p>
-                        Submit predictions in JSON format matching the following structure:
+                        You will submit your predictions as a CSV file with 2 columns: <strong>Id</strong> and <strong>Predicted</strong>.
                     </p>
                     <div class="code-block">
-                        <pre><code>{
-  "team_name": "Your Team Name",
-  "submission_id": "submission_001",
-  "predictions": [
-    {
-      "id": "doc_001",
-      "predicted_category": "category_label",
-      "confidence": 0.95
-    }
-  ]
-}</code></pre>
+                        <pre><code>Id,Predicted
+0,34
+1,76
+2,43</code></pre>
                     </div>
                     <p>
-                        Each prediction must include:
+                        Each row should contain:
                     </p>
                     <ul>
-                        <li><strong>id:</strong> Document identifier matching the test set</li>
-                        <li><strong>predicted_category:</strong> Your system's predicted category label</li>
-                        <li><strong>confidence:</strong> Confidence score between 0 and 1 (optional but recommended)</li>
+                        <li><strong>Id:</strong> Row identifier from the evaluation dataset</li>
+                        <li><strong>Predicted:</strong> Your predicted integer label (0-81) corresponding to one of the 82 categories</li>
                     </ul>
                     
-                    <h4>2. System Description</h4>
+                    <h3>Submission Instructions</h3>
+                    <ol class="submission-steps">
+                        <li><strong>Download Data:</strong> Download the training and evaluation datasets from the provided Google Drive links</li>
+                        <li><strong>Develop System:</strong> Build and train your classification model using the training dataset</li>
+                        <li><strong>Generate Predictions:</strong> Run your system on the evaluation dataset to generate predictions</li>
+                        <li><strong>Format Output:</strong> Create a CSV file with Id and Predicted columns as shown above</li>
+                        <li><strong>Submit:</strong> Submit your CSV file through the submission portal before the deadline (December 31, 2025)</li>
+                        <li><strong>Await Results:</strong> Final results will be released on January 2, 2026</li>
+                    </ol>
+                    
+                    <h3>System Description Papers</h3>
                     <p>
-                        Include a brief system description (1-2 pages) covering:
+                        Participants are encouraged to submit system description papers detailing their approaches. Papers should cover:
                     </p>
                     <ul>
                         <li>Model architecture and approach</li>
                         <li>Preprocessing and feature engineering techniques</li>
                         <li>Training procedure and hyperparameters</li>
                         <li>External resources used (if any)</li>
-                        <li>Development set results</li>
+                        <li>Results and analysis</li>
                     </ul>
-                    
-                    <h4>3. Code and Reproducibility</h4>
                     <p>
-                        Participants must provide:
+                        <strong>Paper submission deadline:</strong> January 13, 2026<br>
+                        <strong>Notification of acceptance:</strong> January 20, 2026<br>
+                        <strong>Camera-ready versions due:</strong> February 3, 2026
                     </p>
-                    <ul>
-                        <li>Source code for the submitted system</li>
-                        <li>README with setup and execution instructions</li>
-                        <li>Requirements file listing all dependencies</li>
-                        <li>Trained model weights or training scripts</li>
-                    </ul>
-                    
-                    <h3>Submission Instructions</h3>
-                    <ol class="submission-steps">
-                        <li><strong>Register:</strong> Complete the registration form to receive access to the dataset 
-                        and submission portal</li>
-                        <li><strong>Download Data:</strong> Access the training, development, and test datasets through 
-                        the provided links</li>
-                        <li><strong>Develop System:</strong> Build and train your classification model using the training 
-                        and development sets</li>
-                        <li><strong>Generate Predictions:</strong> Run your system on the test set to generate predictions 
-                        in the required format</li>
-                        <li><strong>Submit:</strong> Upload your prediction file, system description, and code through 
-                        the submission portal before the deadline</li>
-                        <li><strong>Await Results:</strong> Evaluation results will be announced on the specified date</li>
-                    </ol>
-                    
-                    <h3>Submission Rules</h3>
-                    <ul class="submission-rules">
-                        <li>Each team may submit up to <strong>3 system runs</strong> for evaluation</li>
-                        <li>Teams must designate one submission as their <strong>primary submission</strong> for official ranking</li>
-                        <li>Use of external data and pre-trained models is allowed but must be clearly documented</li>
-                        <li>Manual annotation or modification of test data is strictly prohibited</li>
-                        <li>All submissions must be received by the deadline (no extensions)</li>
-                        <li>Late submissions will not be evaluated for the official ranking</li>
-                    </ul>
                     
                     <h3>Contact for Submissions</h3>
                     <p>
-                        For questions about submissions or technical issues, please contact the organizers at: 
-                        <strong>eacl2026-abjad-nlp@example.com</strong>
+                        For questions about submissions or technical issues, please contact the organizers.
                     </p>
                     <p>
-                        Submission portal link will be provided upon registration.
+                        Submission portal link will be provided soon.
                     </p>
                 </div>
             </div>
