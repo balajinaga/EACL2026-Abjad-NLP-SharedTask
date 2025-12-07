@@ -46,7 +46,8 @@
                 </div>
             </div>
         </section>
-        
+
+        <!--
         <section id="overview" class="section overview-section">
             <div class="container">
                 <h2>Overview</h2>
@@ -109,8 +110,8 @@
                 </div>
             </div>
         </section>
-
-        <!--
+        --->
+        
         <section id="overview" class="section overview-section">
             <div class="container">
                 <h2>Overview</h2>
@@ -163,7 +164,7 @@
                 </div>
             </div>
         </section>
-        --->
+        
         <section id="dates" class="section dates-section">
             <div class="container">
                 <h2>Important Dates</h2>
@@ -207,6 +208,75 @@
             </div>
         </section>
 
+        <section id="task" class="section task-section">
+            <div class="container">
+                <h2>Task Description</h2>
+                <div class="task-content">
+        
+                    <h3>Task Format</h3>
+                    <p>
+                        Participants will develop systems to perform multi-class classification of Arabic medical text into 
+                        <strong>82 predefined categories</strong>. Each text instance must be assigned to exactly one category 
+                        represented by an integer label between <strong>0 and 81</strong>.
+                    </p>
+        
+                    <h3>Dataset Information</h3>
+                    <p>
+                        The dataset consists of authentic medical-domain text in Arabic. Each row in the dataset contains:
+                    </p>
+        
+                    <ul class="dataset-list">
+                        <li><strong>text:</strong> A medical-domain text segment written in Arabic</li>
+                        <li><strong>category:</strong> The English name of the corresponding medical category</li>
+                        <li><strong>label:</strong> The integer class label (0–81) that participants must predict</li>
+                    </ul>
+        
+                    <p>
+                        There are <strong>82 categories</strong> in total, and the dataset exhibits notable class imbalance, 
+                        making the task both challenging and practically important for real-world healthcare NLP applications.
+                    </p>
+        
+                    <h3>Dataset Links</h3>
+                    <ul class="dataset-list">
+                        <li><strong>Training Dataset:</strong> 
+                            <a href="https://drive.google.com/file/d/19bBhM9Eir6DnLijm90QHwELgGrG2wtZQ/view?usp=sharing" target="_blank">
+                                Download here
+                            </a>
+                        </li>
+                        <li><strong>Evaluation Dataset (no labels):</strong> 
+                            <a href="https://drive.google.com/file/d/1_uXX2ILzhf9aUGos3WPWu6K7dDp4yJoe/view?usp=drive_link" target="_blank">
+                                Download here
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <h3>Evaluation Metric</h3>
+                    <p>
+                        Submissions will be evaluated using the <strong>macro-averaged F1 score</strong> across all 82 classes.
+                        This metric assigns equal weight to each category, encouraging solutions that perform well even on minority classes.
+                    </p>
+                    <p>
+                        For more details about the macro F1 score, refer to the 
+                        <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html" target="_blank">
+                            scikit-learn documentation
+                        </a>.
+                    </p>
+        
+                    <h3>Contact</h3>
+                    <p>
+                        For questions or clarifications, please contact the organising team.
+                    </p>
+        
+                    <p>
+                        We look forward to your participation in the AbjadNLP Medical Text Classification shared task and to 
+                        advancing medical NLP for Arabic and other Abjad-script languages.
+                    </p>
+        
+                </div>
+            </div>
+        </section>
+
+        <!--
         <section id="task" class="section task-section">
             <div class="container">
                 <h2>Task Description</h2>
@@ -262,7 +332,7 @@
                 </div>
             </div>
         </section>
-
+        --->
         <section id="submission" class="section submission-section">
             <div class="container">
                 <h2>Submission Guidelines</h2>
@@ -413,7 +483,7 @@
                     <div class="contact-info">
                         <p>
                             For questions or clarifications, please contact the organising team at
-                            <a href="mailto:your-email@example.com">your-email@example.com</a>.
+                            <a href="mailto:abjadnlpmedicaltextclassificat@gmail.com">abjadnlpmedicaltextclassificat@gmail.com</a>.
                         </p>
 
                         <!--
