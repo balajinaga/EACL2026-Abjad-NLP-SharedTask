@@ -595,17 +595,20 @@ header {
 .organizers-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .organizer-card {
     background-color: var(--color-bg-white);
     border-radius: var(--border-radius-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-md);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border-top: 4px solid var(--color-primary);
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -618,13 +621,13 @@ header {
 }
 
 .organizer-photo {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: var(--spacing-md);
-    border: 4px solid var(--color-primary);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-lg);
+    border: 5px solid #2d8659;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .organizer-photo img {
@@ -637,31 +640,35 @@ header {
 .organizer-info {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
     width: 100%;
+    align-items: center;
 }
 
 .organizer-name {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-xs);
+    margin: 0 0 var(--spacing-sm) 0;
+    line-height: 1.3;
 }
 
 .organizer-affiliation {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--color-text-secondary);
-    line-height: 1.5;
-    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+    margin: 0 0 var(--spacing-md) 0;
+    font-weight: var(--font-weight-normal);
 }
 
 .organizer-role {
     font-size: var(--font-size-sm);
-    color: var(--color-primary);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-light);
+    font-weight: var(--font-weight-normal);
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0 0 var(--spacing-sm) 0;
+    display: none;
 }
 
 .organizer-email {
@@ -678,16 +685,17 @@ header {
 }
 
 .organizer-link {
-    font-size: var(--font-size-sm);
-    color: var(--color-primary);
-    text-decoration: none;
+    font-size: 1rem;
+    color: #5b4fc4;
+    text-decoration: underline;
     transition: color var(--transition-fast);
     word-break: break-word;
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--spacing-xs);
 }
 
 .organizer-link:hover {
-    color: var(--color-secondary);
-    text-decoration: underline;
+    color: #4a3fa0;
 }
 
 .contact-info {
@@ -810,15 +818,24 @@ footer p {
     /* Organizers Grid */
     .organizers-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-lg);
+        gap: var(--spacing-xl);
     }
     
     .organizer-card {
-        padding: var(--spacing-lg) var(--spacing-md);
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .organizer-photo {
+        width: 200px;
+        height: 200px;
     }
     
     .organizer-name {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+    }
+    
+    .organizer-affiliation {
+        font-size: 1.1rem;
     }
 }
 
@@ -854,9 +871,14 @@ footer p {
         padding: var(--spacing-3xl) var(--container-padding);
     }
     
-    /* Organizers Grid - 3 columns on large screens */
+    /* Organizers Grid - 4 columns on large screens */
     .organizers-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .organizer-photo {
+        width: 180px;
+        height: 180px;
     }
     
     /* Code blocks */
