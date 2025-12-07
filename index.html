@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EACL 2026 Abjad NLP Shared Task: Medical text classification in Arabic - Workshop information, important dates, and submission guidelines">
+    <meta name="description"
+        content="EACL 2026 Abjad NLP Shared Task: Medical text classification in Arabic - Workshop information, important dates, and submission guidelines">
     <meta name="keywords" content="EACL 2026, Abjad NLP, Arabic NLP, Medical Text Classification, Shared Task">
     <meta name="author" content="EACL 2026 Abjad NLP Shared Task Organizers">
     <title>EACL 2026 Abjad NLP Shared Task: Medical Text Classification in Arabic</title>
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav id="main-nav">
@@ -34,7 +37,12 @@
             <div class="container">
                 <div class="hero-content">
                     <h2 class="hero-title">EACL 2026 Abjad NLP Shared Task: Medical text classification in Arabic</h2>
-                    <p class="hero-subtitle">A collaborative research challenge advancing Arabic natural language processing in the medical domain</p>
+                    <p class="hero-subtitle">A collaborative research challenge advancing Arabic natural language
+                        processing in the medical domain</p>
+                    <div class="button-container">
+                        <a href="https://forms.gle/paziGMMsDHahRhz4A" target="_blank"
+                            class="register-button large">Register now!</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -44,32 +52,44 @@
                 <h2>Overview</h2>
                 <div class="overview-content">
                     <p>
-                        Welcome to the medical text classification shared task at the <a href="https://wp.lancs.ac.uk/abjad/" target="_blank">Abjad NLP workshop</a> in EACL 2026! 
-                        This shared task brings together researchers and practitioners to develop and evaluate state-of-the-art models 
+                        Welcome to the medical text classification shared task at the <a
+                            href="https://wp.lancs.ac.uk/abjad/" target="_blank">Abjad NLP workshop</a> in EACL 2026!
+                        This shared task brings together researchers and practitioners to develop and evaluate
+                        state-of-the-art models
                         for processing Arabic medical texts.
                     </p>
                     <p>
-                        Each row in the dataset contains a question-answer pair in Arabic under the column named "text", along with 
-                        a category under the "category" column (the class to be predicted). There are <strong>82 categories</strong> in total, 
-                        and there is considerable class imbalance in the dataset across these 82 categories, which makes the problem interesting.
+                        Each row in the dataset contains a question-answer pair in Arabic under the column named "text",
+                        along with
+                        a category under the "category" column (the class to be predicted). There are <strong>82
+                            categories</strong> in total,
+                        and there is considerable class imbalance in the dataset across these 82 categories, which makes
+                        the problem interesting.
                     </p>
                     <p>
-                        Note that you need to predict the integer label corresponding to the "category" column given under the "label" column. 
-                        These category names were originally in Arabic, but we translated them into English using an LLM in order to aid in modeling.
+                        Note that you need to predict the integer label corresponding to the "category" column given
+                        under the "label" column.
+                        These category names were originally in Arabic, but we translated them into English using an LLM
+                        in order to aid in modeling.
                     </p>
                     <p>
-                        These question-answer pairs are from the healthcare domain, and given the importance of NLP applications for healthcare 
-                        in Abjad script languages such as Arabic, we are confident that this shared task will attract significant interest and 
+                        These question-answer pairs are from the healthcare domain, and given the importance of NLP
+                        applications for healthcare
+                        in Abjad script languages such as Arabic, we are confident that this shared task will attract
+                        significant interest and
                         have a positive impact on the community.
                     </p>
                     <h3>Registration</h3>
                     <p>
-                        <strong>Sign up for the competition on Kaggle:</strong> 
-                        <a href="https://www.kaggle.com/t/c854d7e9115e487ca4ca21fe46565656" target="_blank" class="kaggle-link">Join the Kaggle Competition</a>
+                        <strong>Sign up for the competition on Kaggle:</strong>
+                        <a href="https://www.kaggle.com/t/c854d7e9115e487ca4ca21fe46565656" target="_blank"
+                            class="kaggle-link">Join the Kaggle Competition</a>
                     </p>
                     <h3>Getting Started</h3>
                     <p>
-                        To help you get started, we have shared a <a href="https://colab.research.google.com/drive/10LAGmJZhoocW2N19lX3jRg49BWLJOYBF?usp=sharing" target="_blank">sample Colab notebook</a>, 
+                        To help you get started, we have shared a <a
+                            href="https://colab.research.google.com/drive/10LAGmJZhoocW2N19lX3jRg49BWLJOYBF?usp=sharing"
+                            target="_blank">sample Colab notebook</a>,
                         where we finetune CamelBERT.
                     </p>
                 </div>
@@ -125,38 +145,51 @@
                 <div class="task-content">
                     <h3>Task Format</h3>
                     <p>
-                        Participants will develop systems to classify Arabic medical question-answer pairs into 82 predefined categories. 
-                        The task involves multi-class classification where each text must be assigned to exactly one category.
+                        Participants will develop systems to classify Arabic medical question-answer pairs into 82
+                        predefined categories.
+                        The task involves multi-class classification where each text must be assigned to exactly one
+                        category.
                     </p>
-                    
+
                     <h3>Dataset Information</h3>
                     <p>
-                        The dataset consists of question-answer pairs in Arabic from the healthcare domain. Each row contains:
+                        The dataset consists of question-answer pairs in Arabic from the healthcare domain. Each row
+                        contains:
                     </p>
                     <ul class="dataset-list">
                         <li><strong>text:</strong> Question-answer pair in Arabic</li>
-                        <li><strong>category:</strong> Category name (English translation of original Arabic category)</li>
-                        <li><strong>label:</strong> Integer label corresponding to the category (this is what you need to predict)</li>
+                        <li><strong>category:</strong> Category name (English translation of original Arabic category)
+                        </li>
+                        <li><strong>label:</strong> Integer label corresponding to the category (this is what you need
+                            to predict)</li>
                     </ul>
                     <p>
-                        There are <strong>82 categories</strong> in total with considerable class imbalance, making this a challenging 
+                        There are <strong>82 categories</strong> in total with considerable class imbalance, making this
+                        a challenging
                         multi-class classification problem.
                     </p>
-                    
+
                     <h3>Dataset Links</h3>
                     <ul class="dataset-list">
-                        <li><strong>Training Dataset:</strong> <a href="https://drive.google.com/file/d/19bBhM9Eir6DnLijm90QHwELgGrG2wtZQ/view?usp=sharing" target="_blank">Download here</a></li>
-                        <li><strong>Evaluation Dataset (no labels):</strong> <a href="https://drive.google.com/file/d/1_uXX2ILzhf9aUGos3WPWu6K7dDp4yJoe/view?usp=drive_link" target="_blank">Download here</a></li>
+                        <li><strong>Training Dataset:</strong> <a
+                                href="https://drive.google.com/file/d/19bBhM9Eir6DnLijm90QHwELgGrG2wtZQ/view?usp=sharing"
+                                target="_blank">Download here</a></li>
+                        <li><strong>Evaluation Dataset (no labels):</strong> <a
+                                href="https://drive.google.com/file/d/1_uXX2ILzhf9aUGos3WPWu6K7dDp4yJoe/view?usp=drive_link"
+                                target="_blank">Download here</a></li>
                     </ul>
-                    
+
                     <h3>Evaluation Metric</h3>
                     <p>
-                        The scoring metric will be <strong>macro-averaged F1 score</strong> for all 82 classes. This metric gives equal 
-                        weight to each category regardless of support, ensuring balanced performance across all classes including minority ones.
+                        The scoring metric will be <strong>macro-averaged F1 score</strong> for all 82 classes. This
+                        metric gives equal
+                        weight to each category regardless of support, ensuring balanced performance across all classes
+                        including minority ones.
                     </p>
                     <p>
-                        To read more about the macro-average F1 metric, refer to the 
-                        <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html" target="_blank">scikit-learn documentation</a>.
+                        To read more about the macro-average F1 metric, refer to the
+                        <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html"
+                            target="_blank">scikit-learn documentation</a>.
                     </p>
                 </div>
             </div>
@@ -172,13 +205,15 @@
                             To participate in this shared task, please register on Kaggle:
                         </p>
                         <p style="text-align: center; margin: 1.5rem 0;">
-                            <a href="https://www.kaggle.com/t/c854d7e9115e487ca4ca21fe46565656" target="_blank" class="kaggle-button">Join the Kaggle Competition</a>
+                            <a href="https://www.kaggle.com/t/c854d7e9115e487ca4ca21fe46565656" target="_blank"
+                                class="kaggle-button">Join the Kaggle Competition</a>
                         </p>
                     </div>
-                    
+
                     <h3>Prediction File Format</h3>
                     <p>
-                        You will submit your predictions as a CSV file with 2 columns: <strong>Id</strong> and <strong>Predicted</strong>.
+                        You will submit your predictions as a CSV file with 2 columns: <strong>Id</strong> and
+                        <strong>Predicted</strong>.
                     </p>
                     <div class="code-block">
                         <pre><code>Id,Predicted
@@ -191,22 +226,29 @@
                     </p>
                     <ul>
                         <li><strong>Id:</strong> Row identifier from the evaluation dataset</li>
-                        <li><strong>Predicted:</strong> Your predicted integer label (0-81) corresponding to one of the 82 categories</li>
+                        <li><strong>Predicted:</strong> Your predicted integer label (0-81) corresponding to one of the
+                            82 categories</li>
                     </ul>
-                    
+
                     <h3>Submission Instructions</h3>
                     <ol class="submission-steps">
-                        <li><strong>Download Data:</strong> Download the training and evaluation datasets from the provided Google Drive links</li>
-                        <li><strong>Develop System:</strong> Build and train your classification model using the training dataset</li>
-                        <li><strong>Generate Predictions:</strong> Run your system on the evaluation dataset to generate predictions</li>
-                        <li><strong>Format Output:</strong> Create a CSV file with Id and Predicted columns as shown above</li>
-                        <li><strong>Submit:</strong> Submit your CSV file through the submission portal before the deadline (December 31, 2025)</li>
+                        <li><strong>Download Data:</strong> Download the training and evaluation datasets from the
+                            provided Google Drive links</li>
+                        <li><strong>Develop System:</strong> Build and train your classification model using the
+                            training dataset</li>
+                        <li><strong>Generate Predictions:</strong> Run your system on the evaluation dataset to generate
+                            predictions</li>
+                        <li><strong>Format Output:</strong> Create a CSV file with Id and Predicted columns as shown
+                            above</li>
+                        <li><strong>Submit:</strong> Submit your CSV file through the submission portal before the
+                            deadline (December 31, 2025)</li>
                         <li><strong>Await Results:</strong> Final results will be released on January 2, 2026</li>
                     </ol>
-                    
+
                     <h3>System Description Papers</h3>
                     <p>
-                        Participants are encouraged to submit system description papers detailing their approaches. Papers should cover:
+                        Participants are encouraged to submit system description papers detailing their approaches.
+                        Papers should cover:
                     </p>
                     <ul>
                         <li>Model architecture and approach</li>
@@ -220,8 +262,8 @@
                         <strong>Notification of acceptance:</strong> January 20, 2026<br>
                         <strong>Camera-ready versions due:</strong> February 3, 2026
                     </p>
-                    
-                   
+
+
                     <h3>Contact for Submissions</h3>
                     <p>
                         For questions about submissions or technical issues, please contact the organizers.
@@ -235,41 +277,48 @@
                 <h2>Organizers</h2>
                 <div class="organizers-content">
                     <p class="organizers-intro">
-                        The EACL 2026 Abjad NLP Shared Task is organized by a team of researchers specializing in 
+                        The EACL 2026 Abjad NLP Shared Task is organized by a team of researchers specializing in
                         Arabic natural language processing and medical informatics.
                     </p>
                     <div class="organizers-grid">
                         <div class="organizer-card">
                             <div class="organizer-photo">
-                                <img src="images/organizers/pranav-gupta.jpeg" alt="Pranav Gupta" onerror="this.src='images/organizers/placeholder.svg'">
+                                <img src="images/organizers/pranav-gupta.jpeg" alt="Pranav Gupta"
+                                    onerror="this.src='images/organizers/placeholder.svg'">
                             </div>
                             <div class="organizer-info">
                                 <h3 class="organizer-name">Pranav Gupta</h3>
                                 <p class="organizer-affiliation">PhD, Senior Machine Learning Engineer at Cisco</p>
                                 <p class="organizer-role">Lead Organizer</p>
-                                <a href="https://www.linkedin.com/in/pranav-gupta-b6562043/" class="organizer-link" target="_blank">LinkedIn Profile</a>
+                                <a href="https://www.linkedin.com/in/pranav-gupta-b6562043/" class="organizer-link"
+                                    target="_blank">LinkedIn Profile</a>
                             </div>
                         </div>
                         <div class="organizer-card">
                             <div class="organizer-photo">
-                                <img src="images/organizers/niranjan-kumar-m.jpeg" alt="Niranjan Kumar M" onerror="this.src='images/organizers/placeholder.svg'">
+                                <img src="images/organizers/niranjan-kumar-m.jpeg" alt="Niranjan Kumar M"
+                                    onerror="this.src='images/organizers/placeholder.svg'">
                             </div>
                             <div class="organizer-info">
                                 <h3 class="organizer-name">Niranjan Kumar M</h3>
                                 <p class="organizer-affiliation">Master in Data Science, Sr Data Scientist at Lowe's</p>
                                 <p class="organizer-role">Co-Organizer</p>
-                                <a href="https://www.linkedin.com/in/niranjan-kumar-m-754861184/" class="organizer-link" target="_blank">LinkedIn Profile</a>
+                                <a href="https://www.linkedin.com/in/niranjan-kumar-m-754861184/" class="organizer-link"
+                                    target="_blank">LinkedIn Profile</a>
                             </div>
                         </div>
                         <div class="organizer-card">
                             <div class="organizer-photo">
-                                <img src="images/organizers/balaji-n.jpg" alt="Balaji Nagarajan" onerror="this.src='images/organizers/placeholder.svg'">
+                                <img src="images/organizers/balaji-n.jpg" alt="Balaji Nagarajan"
+                                    onerror="this.src='images/organizers/placeholder.svg'">
                             </div>
                             <div class="organizer-info">
                                 <h3 class="organizer-name">Balaji Nagarajan</h3>
-                                <p class="organizer-affiliation">Master in Data Science, Senior Manager of Data Science at Lowe's</p>
+                                <p class="organizer-affiliation">Master in Data Science, Senior Manager of Data Science
+                                    at Lowe's</p>
                                 <p class="organizer-role">Co-Organizer</p>
-                                <a href="https://www.linkedin.com/in/balaji-nagarajan-95385017/" class="organizer-link" target="_blank">LinkedIn Profile</a>
+                                <a href="https://www.linkedin.com/in/balaji-nagarajan-95385017/" class="organizer-link"
+                                    target="_blank">LinkedIn Profile</a>
                             </div>
                         </div>
                         <div class="organizer-card">
@@ -284,7 +333,9 @@
                         </div>
                     </div>
                     <div class="contact-info">
-                        <p>For general inquiries, please contact: <a href="mailto:abjadnlpmedicaltextclassificat@gmail.com">abjadnlpmedicaltextclassificat@gmail.com</a></p>
+                        <p>For general inquiries, please contact: <a
+                                href="mailto:abjadnlpmedicaltextclassificat@gmail.com">abjadnlpmedicaltextclassificat@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -299,4 +350,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
